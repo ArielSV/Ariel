@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "147317506572",
+    "project_id": "ariel-330718",
+    "storage_bucket": "ariel-330718.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:147317506572:android:8ad27375e90c13d2d7a429",
+        "android_client_info": {
+          "package_name": "com.example.ariel"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "147317506572-72hatv8vcgsjc7v389ifsfm4nmc084rh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ariel",
+            "certificate_hash": "deabc11b36d5c1706c23c39c83fccb3d547979c0"
+          }
+        },
+        {
+          "client_id": "147317506572-hds2gu00h7bpmbfvf2o95n37iv0kkd8j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCxmywZhAr60tRwemAxts-Y4LYsjdqFXAE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "147317506572-hds2gu00h7bpmbfvf2o95n37iv0kkd8j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/movies_nav_graph"
+    app:startDestination="@id/main_fragment">
+
+    <fragment
+        android:id="@+id/main_fragment"
+        android:name="com.example.ariel.flows.moviesflow.fragments.MainFragment"
+        android:label="MainFragment"
+        tools:layout="@layout/main_fragment">
+
+        <action
+            android:id="@+id/action_to_movies_fragment"
+            app:destination="@id/movies_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/movies_fragment"
+        android:name="com.example.ariel.flows.moviesflow.fragments.MoviesFragment"
+        android:label="MoviesFragment"
+        tools:layout="@layout/movies_fragment">
+        <action
+            android:id="@+id/action_to_detail_movie_fragment"
+            app:destination="@id/detail_movie_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/detail_movie_fragment"
+        android:name="com.example.ariel.flows.moviesflow.fragments.MovieDetailFragment"
+        tools:layout="@layout/movie_detail_fragment">
+        <argument
+            android:name="dataModel"
+            app:argType="com.example.ariel.flows.moviesflow.model.MovieDetailResponse"
+            app:nullable="true" />
+    </fragment>
+
+</navigation>
