@@ -1,6 +1,7 @@
 package com.example.ariel.flows.moviesflow.fragments
 
 import android.os.Bundle
+import android.text.method.ScrollingMovementMethod
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -48,6 +49,7 @@ class MovieDetailFragment : FragmentView() {
             }
             textViewOverview.text = args.dataModel?.overview.orEmpty()
             buttonClose.setOnClickListener { findNavController().popBackStack() }
+            textViewOverview.movementMethod = ScrollingMovementMethod()
         }
     }
 

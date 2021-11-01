@@ -170,7 +170,7 @@ class MapActivity : BaseFragmentActivity(), OnMapReadyCallback {
 
     private companion object {
         const val REQUEST_LOCATION = 1
-        const val FIVE_MINUTES = 10000L
+        const val FIVE_MINUTES = 3000L
         const val FIREBASE_DB_NAME = "location_test"
         const val LATITUDE = "latitude"
         const val LONGITUDE = "longitude"

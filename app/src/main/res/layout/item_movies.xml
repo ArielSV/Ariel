@@ -9,12 +9,12 @@
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/cardView"
-            android:layout_width="100dp"
-            android:layout_height="130dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            app:cardCornerRadius="5dp"
-            app:cardElevation="4dp"
+            android:layout_width="@dimen/card_width"
+            android:layout_height="@dimen/card_height"
+            android:layout_marginStart="@dimen/spacing_large"
+            android:layout_marginEnd="@dimen/spacing_large"
+            app:cardCornerRadius="@dimen/card_corner_radius"
+            app:cardElevation="@dimen/card_elevation"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -28,11 +28,12 @@
         </com.google.android.material.card.MaterialCardView>
 
         <TextView
+            style="@style/TitlesDescription"
             android:id="@+id/textView_title"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
+            android:layout_marginTop="@dimen/spacing_medium"
+            android:layout_marginBottom="@dimen/spacing_medium"
             android:gravity="center"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/cardView"

@@ -13,4 +13,12 @@
         <item name="windowNoTitle">true</item>
         <item name="android:windowFullscreen">true</item>
     </style>
+
+    <style name="TitlesDescription" >
+        <item name="android:textSize">@dimen/text_title_description_size</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
 </resources>

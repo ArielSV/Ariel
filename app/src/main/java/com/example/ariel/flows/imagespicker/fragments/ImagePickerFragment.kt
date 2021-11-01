@@ -11,9 +11,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.app.ActivityCompat
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.ariel.R
 import com.example.ariel.base.fragment.FragmentView
 import com.example.ariel.databinding.ImagePickerFragmentBinding
 import com.example.ariel.flows.imagespicker.views.ImagesItemView
+import com.example.ariel.utils.verifyAvailableNetwork
 import com.google.firebase.storage.FirebaseStorage
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.GroupieViewHolder
@@ -41,7 +43,13 @@ class ImagePickerFragment : FragmentView() {
     }
 
     private fun setupListener() {
-        binding.buttonSelectImages.setOnClickListener { checkPermissions() }
+        binding.buttonSelectImages.setOnClickListener {
+            if (verifyAvailableNetwork(requireActivity())) {
+                checkPermissions()
+            } else {
+                showError(getString(R.string.internet_error))
+            }
+        }
     }
 
     private fun initRecyclerView() {
@@ -100,6 +108,7 @@ class ImagePickerFragment : FragmentView() {
             val storageReference = FirebaseStorage.getInstance().getReference("images/$fileName")
             storageReference.putFile(it).addOnSuccessListener {
                 dismissProgressDialog()
+                showMessage(getString(R.string.images_upload_complete))
             }.addOnFailureListener { error ->
                 dismissProgressDialog()
                 showError(error.message.orEmpty())
